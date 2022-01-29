@@ -1,0 +1,44 @@
+#cart{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+    grid-gap: 1%;
+    padding: 50px;
+    margin: 0.5%;
+  }
+  #total{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .parent{
+    border: 2px solid black;
+    padding: 50px;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #feddd8;
+  }
+  .parent>img{
+    width: 80%;
+    border-radius: 50px;
+  }
+  .parent>p{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .parent>button, #total>button{
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px; 
+  }
+  button:hover{
+    cursor: pointer;
+  }

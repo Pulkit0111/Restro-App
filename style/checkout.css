@@ -1,0 +1,17 @@
+input{
+    width: 250px;
+    height: 40px;
+    border: 2px solid black;
+}
+button{
+    width: 200px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: 1px solid white; 
+}
+button:hover{
+    cursor: pointer;
+}
