@@ -19,7 +19,9 @@ var cart_items=JSON.parse(localStorage.getItem("cart"));
         var arr=x.filter(i=>i.meal!==element.meal);
         window.localStorage.clear();
         localStorage.setItem("cart",JSON.stringify(arr));
+        sum_total(arr);
         cart_data(arr);
+        // window.location.href="../cart.html";
       })
       parent.append(img,p,price,btn)
       parent.setAttribute("class","parent");
@@ -28,12 +30,15 @@ var cart_items=JSON.parse(localStorage.getItem("cart"));
   }
   cart_data(cart_items);
   var h2=document.createElement("h2");
-  var sum=0;
-  cart_items.forEach(ele=>{
+  const sum_total=(y)=>{
+    var sum=0;
+    y.forEach(ele=>{
     sum+=ele.price;
-  })
-  h2.innerHTML=`Cart Total: Rs. ${sum}`;
+    h2.innerHTML=`Cart Total: Rs. ${sum}`;
+  });
+}
   total.append(h2);
+  sum_total(cart_items);
   var checkout=document.createElement("button");
   checkout.textContent="Checkout";
   total.append(checkout);
